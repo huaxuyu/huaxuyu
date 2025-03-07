@@ -1,6 +1,6 @@
 # Hi, I'm Huaxu Yu 👋
 
-I am a chemist and software developer with a strong focus on mass spectrometry-based metabolomics. My work integrates analytical chemistry, instrumentation, computer science, and bioinformatics to develop innovative tools for high-quality data processing and biological insights.
+I am a chemist and software developer with a strong focus on mass spectrometry-based metabolomics. My work integrates analytical chemistry, instrumentation, computer science and bioinformatics to develop innovative tools that can (1) produce high-quality MS data and (2) transform raw data into meaningful biological insights.
 
 ## Connect with Me
 

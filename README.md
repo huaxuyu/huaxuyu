@@ -1,11 +1,34 @@
-# Hi, I'm Huaxu Yu 👋
+# Yu Lab Website
 
-I am a chemist and software developer with a strong focus on mass spectrometry-based metabolomics. My work integrates analytical chemistry, instrumentation, computer science and bioinformatics to develop innovative tools that can (1) produce high-quality MS data and (2) transform raw data into meaningful biological insights.
+This repository now contains the Vue website for Yu Lab, a clinical
+metabolomics and open-source software lab at the First Affiliated Hospital of
+Zhejiang University School of Medicine.
 
-## Connect with Me
+## Development
 
 - [Google Scholar](https://scholar.google.ca/citations?user=tQAb4wkAAAAJ&hl=en)
 - Email: huaxuyu@zju.edu.cn | yhxchem@outlook.com
 - Personal website: [https://huaxuyu.github.io/huaxuyu/](https://huaxuyu.github.io/huaxuyu/)
 
-**Always open to collaborations and discussions on metabolomics, bioinformatics, and software development!**
+Install dependencies and start the local site:
+
+```bash
+npm install
+npm run dev
+```
+
+Build the production site:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+The app uses hash-based tab navigation and `base: "./"` in `vite.config.js`, so
+the build works on GitHub Pages whether it is served from a project URL first or
+from the future custom domain `huaxuyulab.com`.

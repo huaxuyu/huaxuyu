@@ -174,8 +174,7 @@ img {
 .publication-card,
 .contact-card,
 .stat-card,
-.news-item,
-.timeline-item {
+.news-item {
   background: var(--paper);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -412,8 +411,7 @@ h3 {
 .join-card p,
 .publication-card p,
 .contact-card p,
-.news-item p,
-.timeline-item p {
+.news-item p {
   color: var(--muted);
   line-height: 1.65;
 }
@@ -424,7 +422,6 @@ h3 {
 }
 
 .news-list,
-.timeline,
 .publication-list {
   display: grid;
   gap: 12px;
@@ -647,9 +644,9 @@ h3 {
 
 .people-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+  grid-template-columns: 1fr;
   gap: 16px;
-  align-items: stretch;
+  align-items: start;
 }
 
 .person-card,
@@ -669,6 +666,43 @@ h3 {
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 8px;
+}
+
+.person-training {
+  display: grid;
+  gap: 14px;
+  margin-top: 22px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.person-training h3 {
+  margin-bottom: 0;
+}
+
+.person-training article {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 16px;
+}
+
+.person-training span {
+  color: var(--rose);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.person-training strong {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.person-training p,
+.person-training small {
+  display: block;
+  margin-bottom: 3px;
+  color: var(--muted);
+  line-height: 1.45;
 }
 
 .person-actions {
@@ -697,30 +731,6 @@ h3 {
 .join-card li {
   color: #35413d;
   line-height: 1.55;
-}
-
-.timeline {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-}
-
-.timeline-item {
-  min-height: 190px;
-  padding: 22px;
-}
-
-.timeline-item span {
-  color: var(--rose);
-  font-size: 0.82rem;
-  font-weight: 800;
-}
-
-.timeline-item h3 {
-  margin: 10px 0 8px;
-}
-
-.timeline-item small {
-  color: var(--muted);
-  line-height: 1.5;
 }
 
 .publication-list {
@@ -872,8 +882,7 @@ h3 {
 
   .feature-grid,
   .research-grid,
-  .contact-grid,
-  .timeline {
+  .contact-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -973,8 +982,7 @@ h3 {
   .feature-grid,
   .research-grid,
   .project-grid,
-  .contact-grid,
-  .timeline {
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
@@ -993,6 +1001,11 @@ h3 {
 
   .featured-person img {
     width: 160px;
+  }
+
+  .person-training article {
+    grid-template-columns: 1fr;
+    gap: 6px;
   }
 
   .publication-card {

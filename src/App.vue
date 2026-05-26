@@ -296,7 +296,6 @@ const training = [
     place: "Zhejiang University",
     role: "B.Sc. in Chemistry, Qiushi Honors Program",
     period: "2014.9 - 2018.6",
-    supervisor: "Prof. Hao Li and Prof. Feihe Huang",
   },
 ];
 
@@ -552,6 +551,19 @@ const socialLinks = [
                 chemistry, bioinformatics, and open-source software to generate
                 reliable clinical metabolomics insight.
               </p>
+              <div class="person-training">
+                <h3>Scientific background</h3>
+                <article v-for="item in training" :key="item.place">
+                  <span>{{ item.period }}</span>
+                  <div>
+                    <strong>{{ item.place }}</strong>
+                    <p>{{ item.role }}</p>
+                    <small v-if="item.supervisor">
+                      Research supervisor: {{ item.supervisor }}
+                    </small>
+                  </div>
+                </article>
+              </div>
               <div class="person-actions">
                 <a :href="cvUrl" target="_blank" rel="noreferrer">
                   <Download :size="16" />
@@ -586,25 +598,6 @@ const socialLinks = [
             </a>
           </section>
         </div>
-
-        <section class="content-section">
-          <div class="section-heading compact">
-            <p class="eyebrow">Training</p>
-            <h2>Scientific background</h2>
-          </div>
-          <div class="timeline">
-            <article
-              v-for="item in training"
-              :key="item.place"
-              class="timeline-item"
-            >
-              <span>{{ item.period }}</span>
-              <h3>{{ item.place }}</h3>
-              <p>{{ item.role }}</p>
-              <small>Research supervisor: {{ item.supervisor }}</small>
-            </article>
-          </div>
-        </section>
       </section>
 
       <section v-else-if="activeTab === 'publications'" class="tab-panel">
